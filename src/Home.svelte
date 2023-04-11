@@ -88,7 +88,7 @@
   <!-- step 3 -->
 
   <div>
-    <div class="justify-center md:flex">
+    <div class="flex flex-row items-center justify-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
