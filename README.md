@@ -29,3 +29,5 @@ View [Here](https://catnapping.vercel.app/)
 
 To dos
 - Add Animations
+- Add popup on save
+- edit bag page
