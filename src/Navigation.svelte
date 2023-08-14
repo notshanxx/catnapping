@@ -3,7 +3,7 @@
 </script>
 
 <nav
-  class=" container mx-auto flex justify-between px-10 py-8 md:px-20 {current ===
+  class="flex justify-between px-10 py-8 md:px-[35%] {current ===
   'catground'
     ? ' bg-orange-300 '
     : 'bg-orange-50'}"
