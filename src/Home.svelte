@@ -1,6 +1,6 @@
-<div class="bg-orange-200">
-  <div class="mx-5 flex pt-[30%] pb-20 md:ml-10 md:pt-28">
-    <div>
+<div class="bg-orange-200 min-h-screen pb-[10%] flex justify-center items-center text-center" >
+ 
+    <div class=" flex justify-center items-center flex-col" >
       <h1 class="font-montserrat text-4xl font-black lg:text-5xl">
         Welcome to Catnapping
       </h1>
@@ -15,7 +15,7 @@
         >
       </button>
     </div>
-  </div>
+
 </div>
 
 <!-- guide -->
@@ -47,6 +47,8 @@
 
     <div>
       <img
+      height="100"
+      width="150"
         class="my-7 w-full md:h-32 lg:h-52"
         src="/gifs/surprised-cat.gif"
         alt="surprised-cat"
@@ -78,6 +80,8 @@
 
     <div>
       <img
+      height="100"
+      width="150"
         class="my-7 w-full md:h-32 lg:h-52"
         src="gifs/cat-laser-fighting.gif"
         alt="laser fighting cat"
@@ -112,6 +116,8 @@
 
     <div class="flex justify-center">
       <img
+      height="100"
+      width="150"
         class="my-7 aspect-video w-full md:h-32 lg:h-52"
         src="/gifs/cat-in-bag.gif"
         alt="cat in bag"
