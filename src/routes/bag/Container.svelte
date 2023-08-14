@@ -21,7 +21,6 @@
       JSON.stringify($storedCAtId)
     );
     imageDiv.remove()
-    imageDiv.parentNode.removeChild(imageDiv);
   }
 
   onMount(async function waitImageToLoad() {
@@ -42,11 +41,13 @@
 
 <div bind:this={imageDiv} class="relative">
   <img
+    width="100"
+    height="100"
     bind:this={img}
     loading="lazy"
     src="https://cataas.com/cat/{cat}"
     alt="cat-{cat}"
-    class=" mb-4"
+    class=" mb-4 w-full h-full bg-slate-600 rounded"
   />
   <button
     class="p-1 absolute  top-2 right-2  {imageLoaded === true ? 'block' : 'hidden'}"
