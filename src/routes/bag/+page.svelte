@@ -8,7 +8,7 @@
 
 <Navigation />
 
-<h1 class="mx-10 rounded-lg bg-orange-100 p-3 text-center">
+<h1 class="mx-10 mb-3 rounded-lg p-3 text-center">
   Here lies all the catnapped cat
 </h1>
 
@@ -36,4 +36,4 @@
   <!-- end of for each -->
 </div>
 
-<Footer />
+<!-- <Footer /> -->
