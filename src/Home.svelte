@@ -1,16 +1,16 @@
-<div class="bg-orange-200 min-h-screen pb-[10%] flex justify-center items-center text-center" >
+<div class="bg-orange-300 min-h-[80vh] md:min-h-[85vh] flex justify-center items-center text-center" >
  
-    <div class=" flex justify-center items-center flex-col" >
+    <div class=" flex justify-between items-center flex-col" >
       <h1 class="font-montserrat text-4xl font-black lg:text-5xl">
         Welcome to Catnapping
       </h1>
 
       <p class="my-4">Veni, vidi, vici!! <br /> bag all cat U catnapped!!</p>
 
-      <button class="rounded-sm border-2 border-orange-100 bg-orange-300 p-3">
+      <button class="rounded-sm border-2 border-orange-100 bg-orange-400 p-3">
         <a
           href="/catground"
-          class="font-montserrat font-semibold text-orange-900"
+          class="font-montserrat font-semibold text-orange-100"
           >Go To Catground</a
         >
       </button>
@@ -20,7 +20,7 @@
 
 <!-- guide -->
 
-<div class="mx-8 justify-center py-10 md:flex md:gap-5">
+<div class="mx-8 justify-center py-32 md:flex md:justify-around">
   <!-- step 1 -->
   <div>
     <div class="flex flex-row items-center justify-center">
