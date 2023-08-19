@@ -1,4 +1,8 @@
 <script>
+  import Status from "../../Status.svelte";
+  // text that go inside status
+  $: status = 'Scouting...'
+
   /*
   catArr = the array of cat id from the api
   currentIndex = index of the image displayed \\\ When clicked the catnap button it will get the id in the catArr using the currentIndex
@@ -29,16 +33,31 @@
   // the cat image element
   let catImage;
 
+  // check status if owned or not
+  // function checkStatus() {
+  //   if ($storedCAtId.includes($catArr[$currentIndex])) {
+  //     status = "Cat bagged"
+  //   }else{
+  //     setTimeout(() => {
+  //       status = "Ready to be catnapped"
+  //     }, 500);
+      
+  //   }
+  // }
+
+
   //FETCH FUNCTION
 
   const fetchRandomCat = async () => {
     fetching = true;
+    status = "Fetching Cat..."
     const response = await fetch("https://cataas.com/cat?json=true");
     const json = await response.json();
     // store in exported variable in stored-cat.js
     $catArr.push(json._id);
     console.log($catArr);
     fetching = false;
+    
   };
 
   // fetch on open
@@ -53,7 +72,7 @@
     }
 
     if ($storedCAtId.includes($catArr[$currentIndex])) {
-      alert("duplicate");
+      status = "Already Owned"
       return;
     }
 
@@ -67,6 +86,10 @@
       "cat-id-from-local-storage",
       JSON.stringify($storedCAtId)
     );
+
+    // do this if new added
+    status = "Added to bag!!!"
+
     console.log($storedCAtId);
 
     console.log(localStorage.getItem("cat-id-from-local-storage"));
@@ -81,6 +104,7 @@
     console.log(catImage.style.display);
 
     $currentIndex--;
+    status = "Scouting Back"
   }
 
   // handle for next btn
@@ -101,7 +125,9 @@
   }
 </script>
 
+
 <Navigation current={"catground"} />
+
 
 <h1 class="mx-10 my-6 text-center">
   This is the catground where you can search cats
@@ -182,15 +208,18 @@
     {#if !fetching}
       <img
         bind:this={catImage}
-        on:load={hideLoader}
-        on:click={handleCatnapButton}
+        on:load={() => {status = "Cat Fetched"; hideLoader()}}
         class="z-10 max-h-full max-w-full"
         loading="lazy"
         src="https://cataas.com/cat/{$catArr[$currentIndex]}"
         alt="img"
       />
     {/if}
+    <Status>
+      {status}
+    </Status>
   </div>
+
 </div>
 
 <div class="my-3 flex justify-center gap-8">
@@ -261,3 +290,5 @@
     }
 
 </style> -->
+
+
