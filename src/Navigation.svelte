@@ -3,22 +3,22 @@
 </script>
 
 <nav
-  class="flex justify-between px-10 py-8 md:px-[35%] {current ===
-  'catground'
+  class="flex justify-between px-10 py-10 md:px-[35%] {current ===
+  'catground'                    
     ? ' bg-orange-300 '
     : 'bg-orange-50'}"
 >
-  <a href="/">Home</a>
+  <a href="/">Home</a>   
   <div class="justify-end">
     <a
       href="/catground"
-      class="rounded border-orange-700 bg-orange-300 p-3 {current ===
+      class="rounded border-orange-700 bg-orange-400 p-3 {current ===
       'catground'
-        ? 'bg-orange-50 '
-        : 'bg-orange-300 '}"
+        ? 'bg-orange-50 text-slate-900 '
+        : 'bg-orange-300 text-white'}"
       on:click={() => (current = "catground")}>Catground</a
     >
-    <a href="/bag">Bag</a>
+    <a href="/bag" class="pl-2">Bag</a>
     <!-- <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
