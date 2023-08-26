@@ -125,7 +125,9 @@
   }
 </script>
 
-
+<svelte:head>
+  <title>Catground</title>
+</svelte:head>
 <Navigation current={"catground"} />
 
 

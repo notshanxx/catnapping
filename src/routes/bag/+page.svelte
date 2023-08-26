@@ -5,7 +5,9 @@
   import Container from "./Container.svelte";
   let parentDiv;
 </script>
-
+<svelte:head>
+  <title>Bag</title>
+</svelte:head>
 <Navigation />
 
 <h1 class="mx-10 mb-3 rounded-lg p-3 text-center">
